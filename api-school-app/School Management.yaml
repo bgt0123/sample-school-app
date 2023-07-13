@@ -1,0 +1,35 @@
+openapi: 3.0.3
+info:
+  title: School Management
+  description: School Management
+  version: 1.0.0
+servers:
+  - url: 'https'
+paths:
+  /students:
+    get:
+      operationId: ListOfStudents
+      summary: List of Students, that are in the school
+      description: Provides a paginated list of students based on the search criteria provided. If no search criteria is provided, books are returned in alphabetical order.
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/ListBooksResponse'
+          '401':
+            description:
+              Request failed, This is the response received when a request is made
+              with invalid API credentials
+          '403':
+            description: >-
+              Request failed, This is the response received when a request is made
+              with valid API credentials towards an API endpoint or resource you
+              do not have access to.
+
+      parameters:
+        - in: query
+          name: q
+          type: string
+          description: A query string to use for filtering books by name and class.
+
+  
