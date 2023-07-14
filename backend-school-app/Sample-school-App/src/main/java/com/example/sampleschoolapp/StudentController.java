@@ -10,7 +10,7 @@ import java.util.List;
 public class StudentController {
 
     @Autowired
-    StudentRepository studentRepository; // TODO: Replace later with Service Layer
+    StudentRepository studentRepository; // TODO: Replace later with Service Layer once Business Logic is implemented
 
     @GetMapping(value= "/{id}", produces = "application/json")
     public @ResponseBody Student getStudent(@PathVariable int id){
@@ -19,7 +19,7 @@ public class StudentController {
 
     @GetMapping(value= "", produces = "application/json")
     public @ResponseBody List<Student> getStudent(){
-        return studentRepository.findAllByNameNotNull();
+        return studentRepository.findAllByNameNotNullOrderByIdAsc();
     }
 }
 

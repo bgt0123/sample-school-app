@@ -9,7 +9,7 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 
     Student findStudentById(int id);
 
-    List<Student> findAllByNameNotNull();
+    List<Student> findAllByNameNotNullOrderByIdAsc();
 
     // TODO: test
 
