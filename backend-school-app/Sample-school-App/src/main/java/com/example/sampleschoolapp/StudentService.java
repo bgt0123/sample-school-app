@@ -1,4 +1,4 @@
-package com.example.sampleschoolapp.Student;
+package com.example.sampleschoolapp;
 
 
 import org.springframework.stereotype.Service;
