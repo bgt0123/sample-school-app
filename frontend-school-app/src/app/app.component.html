@@ -1,2 +1,15 @@
-<h1> This is a Student APP</h1>
-<app-students></app-students>
+<div class="header">
+  <a href="" class="logo">Schul-App</a>
+  <a routerLink="/room" routerLinkActive="active" ariaCurrentWhenActive="page" class="site">Klassenraum</a>
+  <a routerLink="/student" routerLinkActive="active" ariaCurrentWhenActive="page" class="site">Schüler</a>
+  <a routerLink="/timetable" routerLinkActive="active" ariaCurrentWhenActive="page" class="site">Stundenplan</a>
+  <a routerLink="/teacher" routerLinkActive="active" ariaCurrentWhenActive="page" class="site">Lehrer</a>
+  <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page" class="site">Login</a>
+</div>
+
+<div class="body">
+  <router-outlet></router-outlet>
+</div>
+<div class="footer">
+
+</div>

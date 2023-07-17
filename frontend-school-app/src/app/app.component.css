@@ -1,0 +1,22 @@
+.logo{
+  flex-grow: 1;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5d815d;
+  color: white;
+  gap: 1rem;
+  padding: 1%;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+.site:hover{
+  text-decoration: underline;
+}
+.body{
+
+}
