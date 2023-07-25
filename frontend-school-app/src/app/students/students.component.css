@@ -1,0 +1,17 @@
+.studentsTable{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+table {
+  text-align: center !important;
+  width: 100%;
+}
+
+.mat-header-cell {
+  text-align: center;
+}
+.liste{
+  display: flex;
+  align-items: flex-start;
+}

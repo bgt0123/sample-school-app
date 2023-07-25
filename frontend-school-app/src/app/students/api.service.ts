@@ -12,6 +12,7 @@ export class ApiService {
   }
 
   getStudents(): Observable<Student[]> {
+
     return this.http.get<Student[]>(this.baseURL + 'students')
   }
 

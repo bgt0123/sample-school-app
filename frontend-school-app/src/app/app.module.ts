@@ -9,23 +9,23 @@ import { AppComponent } from './app.component';
 import { StudentsComponent } from './students/students.component';
 import { TeacherComponent } from './teacher/teacher.component';
 import { AppRoutingModule } from './app-routing.module';
-import { RouterModule, Routes } from "@angular/router";
+import { RouterModule } from "@angular/router";
 import { TimetableComponent } from './timetable/timetable.component';
 import { RoomComponent } from './room/room.component';
 import { LoginComponent } from './login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from "@angular/material/table";
+import {MatInputModule} from "@angular/material/input";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatSortModule} from "@angular/material/sort";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {routing} from "./app.routing";
 
-const routes: Routes = [
-  { path: 'student', component: StudentsComponent },
-  { path: 'teacher', component: TeacherComponent },
-  { path: 'timetable', component: TimetableComponent },
-  { path: 'room', component: RoomComponent },
-  { path: 'login', component: LoginComponent }
-];
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    StudentsComponent,
     TeacherComponent,
     TimetableComponent,
     RoomComponent,
@@ -33,13 +33,20 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    StudentsComponent,
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    routing,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
