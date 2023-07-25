@@ -1,4 +1,4 @@
-package com.example.sampleschoolapp;
+package com.example.sampleschoolapp.student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -9,7 +9,5 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 
     Student findStudentById(int id);
 
-    List<Student> findAllByNameNotNullOrderByIdAsc();
-
-    List<Student> findAllByNameNotNullOrderByIdAsc();
+    List<Student> findAllByFirstnameNotNullOrderByIdAsc();
 }
